@@ -12,7 +12,9 @@ export class ProductosService {
 
   constructor(private http: HttpClient) {
     this.cargarProductos();
-    this.cargando = true;
+    setTimeout(() => {
+      this.cargando = false;
+    }, 3000);
   }
 
   private cargarProductos() {

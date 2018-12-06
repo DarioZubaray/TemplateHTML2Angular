@@ -8,14 +8,14 @@ import { InfoPagina } from '../interfaces/info-pagina.interface';
 export class InfoPaginaService {
 
   info: InfoPagina = {};
-  cargada = false;
+  cargando = false;
   equipo: any[] = [];
 
   constructor(private http: HttpClient) {
     console.log('Info Servicio inicializado');
     this.cargarInfo();
     this.cargarEquipo();
-    this.cargada = true;
+    this.cargando = true;
   }
 
   private cargarInfo() {
