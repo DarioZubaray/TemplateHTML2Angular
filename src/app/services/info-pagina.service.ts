@@ -28,7 +28,7 @@ export class InfoPaginaService {
   private cargarEquipo() {
     const urlFirebase = 'https://angular-templatehtml.firebaseio.com/equipo.json';
     this.http.get(urlFirebase)
-    .subscribe( (resp: any) => {
+    .subscribe( (resp: any[]) => {
       this.equipo = resp;
     });
   }
